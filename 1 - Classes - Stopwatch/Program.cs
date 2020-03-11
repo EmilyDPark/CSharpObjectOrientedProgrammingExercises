@@ -45,8 +45,8 @@ namespace Exercise1_Stopwatch
             Console.WriteLine($"Duration: {stopwatch.Duration}\n");
 
 
-            //stopwatch.Start();
-            //stopwatch.Start(); 
+            stopwatch.Start();
+            stopwatch.Start(); // Exception: Cannot start again without stopping
 
         } // Main method
 
