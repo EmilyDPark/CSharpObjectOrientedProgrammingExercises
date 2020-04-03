@@ -8,22 +8,22 @@ namespace Exercise2_DesignADatabaseCommand
 {
     public class SqlConnection : DbConnection
     {
-        public string _connectionString { get; set; }
+        public string ConnectionString { get; set; }
 
         public SqlConnection(string connectionString)
             : base(connectionString)
         {
-            _connectionString = connectionString;
+            ConnectionString = connectionString;
         }
 
         public override void Open()
         {
-            Console.WriteLine($"Open SQL connection: {_connectionString}");
+            Console.WriteLine($"Open SQL connection: {ConnectionString}");
         }
 
         public override void Close()
         {
-            Console.WriteLine($"Close SQL connection: {_connectionString}");
+            Console.WriteLine($"Close SQL connection: {ConnectionString}");
         }
     }
 }
