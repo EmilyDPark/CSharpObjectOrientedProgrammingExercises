@@ -8,22 +8,22 @@ namespace Exercise1_DesignADatabaseConnection
 {
     public class OracleConnection : DbConnection
     {
-        public string _connectionString { get; set; }
+        public string ConnectionString { get; set; }
 
         public OracleConnection(string connectionString)
             : base(connectionString)
         {
-            _connectionString = connectionString;
+            ConnectionString = connectionString;
         }
 
         public override void Open()
         {
-            Console.WriteLine($"Open Oracle connection: {_connectionString}");
+            Console.WriteLine($"Open Oracle connection: {ConnectionString}");
         }
 
         public override void Close()
         {
-            Console.WriteLine($"Close Oracle connection: {_connectionString}");
+            Console.WriteLine($"Close Oracle connection: {ConnectionString}");
         }
     }
 }
