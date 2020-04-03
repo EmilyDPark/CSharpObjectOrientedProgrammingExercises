@@ -8,23 +8,23 @@ namespace Exercise2_DesignADatabaseCommand
 {
     public class DbCommand
     {
-        private string _command { get; set; }
-        private DbConnection _connection { get; set; }
+        private string Command { get; set; }
+        private DbConnection Connection { get; set; }
 
         public DbCommand(string command, DbConnection connection)
         {
             if (string.IsNullOrEmpty(command))
                 throw new InvalidOperationException("Command cannot be null or empty.");
 
-            _command = command;
-            _connection = connection;
+            Command = command;
+            Connection = connection;
         }
 
         public void Execute()
         {
-            _connection.Open();
-            Console.WriteLine("Execute: " + _command);
-            _connection.Close();
+            Connection.Open();
+            Console.WriteLine("Execute: " + Command);
+            Connection.Close();
         }
     }
 }
