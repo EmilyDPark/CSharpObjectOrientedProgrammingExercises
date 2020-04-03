@@ -8,15 +8,15 @@ namespace Exercise1_DesignADatabaseConnection
 {
     public abstract class DbConnection
     {
-        private string _connectionString { get; set; }
-        private TimeSpan _timeout { get; set; }
+        private string ConnectionString { get; set; }
+        private TimeSpan Timeout { get; set; }
 
         public DbConnection(string connectionString)
         {
             if (string.IsNullOrEmpty(connectionString))
                 throw new InvalidOperationException("Connection string cannot be null or empty");
 
-            _connectionString = connectionString;
+            ConnectionString = connectionString;
         }
         public abstract void Open();
 
